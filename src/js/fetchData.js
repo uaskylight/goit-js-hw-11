@@ -19,8 +19,7 @@ export default class NewsApiService {
     const url = `${BASIC_URL}?key=${API_KEY}&q=${this.searchQuery}&image_type=${this.imageType}&orientation=${this.orientation}&safesearch=${this.safesearch}&page=${this.page}&per_page=${this.perPage}`;
 
     try {
-      // USING AXIOUS
-
+   
       const response = await axios.get(url);
       this.incrementPage();
       return response.data;
